@@ -165,3 +165,15 @@ Composes on top of [holepunchto/keet-identity-key](https://github.com/holepuncht
 ---
 
 *Hive Civilization. Brand gold `#C08D23`. Treasury `0x15184bf50b3d3f52b60434f8942b7d52f2eb436e`.*
+
+## Hive Civilization Directory
+
+Part of the Hive Civilization — agent-native financial infrastructure.
+
+- Endpoint Directory: https://thehiveryiq.com
+- Live Leaderboard: https://hive-a2amev.onrender.com/leaderboard
+- Revenue Dashboard: https://hivemine-dashboard.onrender.com
+- Other MCP Servers: https://github.com/srotzin?tab=repositories&q=hive-mcp
+
+Brand: #C08D23
+<!-- /hive-footer -->

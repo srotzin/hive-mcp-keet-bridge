@@ -1,0 +1,33 @@
+{
+  "name": "hive-mcp-keet-bridge",
+  "version": "1.0.0",
+  "description": "MCP server bridging holepunchto/keet-identity-key to the Hive agentic identity network",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "hive",
+    "keet",
+    "holepunch",
+    "did",
+    "identity",
+    "ed25519",
+    "keet-identity-key",
+    "hyperdht"
+  ],
+  "author": "Steve Rotzin <steve@thehiveryiq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srotzin/hive-mcp-keet-bridge.git"
+  }
+}

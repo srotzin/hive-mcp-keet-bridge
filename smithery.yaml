@@ -1,0 +1,47 @@
+name: hive-mcp-keet-bridge
+version: 1.0.0
+description: >
+  MCP server bridging holepunchto/keet-identity-key to the Hive agentic identity network.
+  Provides DID resolution, signed attestation verification, and a partner directory
+  for the Holepunch/Keet ecosystem. Read-only bridge — Hive does not operate hyperdht
+  bootstrap nodes or Keet servers.
+
+author: Steve Rotzin <steve@thehiveryiq.com>
+license: MIT
+
+server:
+  type: http
+  url: https://hive-mcp-keet-bridge.onrender.com
+  endpoint: /mcp
+  protocol: json-rpc-2.0
+  mcp_version: "2024-11-05"
+
+health_check:
+  path: /health
+  method: GET
+
+tools:
+  - name: keet_identity_resolve
+    description: Resolve a Keet identity key to a did:hive: DID document and agent_card. Read-only.
+  - name: keet_did_link
+    description: Link a Keet identity key to a Hive DID. Idempotent. Requires signed attestation.
+  - name: keet_signed_attestation_verify
+    description: Verify an ed25519 attestation signed by a Keet identity key.
+  - name: keet_hyperdht_announce
+    description: Return cached hyperdht announce record for an identity key. Read-only; Hive does not operate hyperdht.
+  - name: keet_partner_directory
+    description: Holepunch + Keet partner integration directory with bridge endpoints. Read-only.
+
+tags:
+  - identity
+  - did
+  - keet
+  - holepunch
+  - ed25519
+  - p2p
+  - attestation
+
+partner_doctrine: >
+  Holepunch is PARTNER. Hive composes on top of holepunchto/keet-identity-key
+  (Apache-2.0) for DID addressing. Holepunch operates DHT and key derivation.
+  Hive operates trust, receipt, and DID resolution.
